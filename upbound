@@ -1,0 +1,12 @@
+1. Set the cluster in your kubeconfig file:
+kubectl config set-cluster "ara-test" --server="https://proxy.upbound.io/env/4621296c-e027-4298-99fe-a12e291ff011"
+
+2. Set the user in your kubeconfig file:
+Make sure to replace [ACCESS_TOKEN] with an actual access token in the command below. You can create a new personal access token here.
+kubectl config set-credentials "nttltd" --token=[ACCESS_TOKEN]
+
+3. Set a context entry in your kubeconfig file:
+kubectl config set-context "ara-test" --cluster="ara-test" --user="nttltd"
+
+4. Use that context as your current context:
+kubectl config use-context "ara-test"
