@@ -1,1 +1,2 @@
 # The service name gets registered in coredns
+# Pods rely on coredns to resolve service names and reach the services on their corresponding IPs.
