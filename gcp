@@ -1,0 +1,2 @@
+# Basic cluster, with 2 nodes
+gcloud container clusters create gke-ara-test01 --num-nodes 2 --machine-type n1-standard-2
