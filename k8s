@@ -1,0 +1,2 @@
+# Update current context with namespace info
+kubectl config set-context --current --namespace namespaceName
