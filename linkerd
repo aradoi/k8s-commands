@@ -8,3 +8,6 @@ Now run:
   linkerd install | kubectl apply -f -    # install the control plane into the 'linkerd' namespace
   linkerd check                           # validate everything worked!
   linkerd dashboard                       # launch the dashboard
+
+# Inject linkerd into existing namespaces using a consolidated yaml file
+cat file.yaml | linkerd inject - | kubectl apply -f -
