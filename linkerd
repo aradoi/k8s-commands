@@ -9,6 +9,11 @@ Now run:
   linkerd check                           # validate everything worked!
   linkerd dashboard                       # launch the dashboard
 
+# Service mesh definition by Linkerd
+Visibility: automatic "golden metrics" such as success rate, latencies, throughput
+Reliability: retries, timeouts, circuit breaking, deadlines, load balancing
+Security: seamless "transparent" mTLS, cert validation, policy
+
 # Inject linkerd into existing namespaces using a consolidated yaml file
 cat file.yaml | linkerd inject - | kubectl apply -f -
 
