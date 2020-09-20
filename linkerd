@@ -17,7 +17,7 @@ Security: seamless "transparent" mTLS, cert validation, policy
 # Install emojivoto (linkerd appd demo)
 curl https://run.linkerd.io/emojivoto.yml | kubectl apply -f -
 
-# Inject linkerd into existing namespaces using a consolidated yaml file
+# Inject linkerd dataplane into existing namespaces using a consolidated yaml file. By default, new namespaces are automatically discovered, but not instrumented unless we use the inject command.
 cat file.yaml | linkerd inject - | kubectl apply -f -
 
 # Check the diff between original yaml file and the changes following linkerd injection
