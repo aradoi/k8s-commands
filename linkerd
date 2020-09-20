@@ -11,3 +11,6 @@ Now run:
 
 # Inject linkerd into existing namespaces using a consolidated yaml file
 cat file.yaml | linkerd inject - | kubectl apply -f -
+
+# Check the diff between original yaml file and the changes following linkerd injection
+diff -u file.yaml <(cat file.yaml | linkerd inject -) | less
