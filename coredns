@@ -5,4 +5,4 @@
 # When coredns is deployed in k8s, you get the following: a serviceaccount, a clusterrole, a clusterrolebinding, a confimap (named coredns - reside the corefile and key, which is the config for coredns. each time this configmap will be changed, the config will be pushed to all core DNS pods that are running. A deployment will get created as well, at least 2 replicas of coredns, image located by default in k8s repo: k8s.gcr.io/coredns:1.2.6.
 # The larger the cluster is (and greater the no of svc) the greater the memory needs (coredns pods start at 70MB requests - limit is 170MB by default)
 # Coredns is based on plugins and each line in the configuration is a directive for a certain plugin.
-# All internal cluster requests will be resolved by coredns. For external requests, there is a proxy pointing to an upstream nameserver (e.g. 8.8.8.8).
+# All internal cluster requests will be resolved by coredns. For external requests, there is a proxy pointing to an upstream nameserver (e.g. 8.8.8.8). The list of nameservers is by default in /etc/resolv.conf of every pod/machine.
